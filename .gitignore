@@ -3,3 +3,9 @@ db/*.sqlite3
 log/*.log
 tmp/**/*
 .*.swp
+vendor/bin/
+vendor/bundler/
+vendor/cache/
+vendor/gems/
+vendor/specifications/
+
