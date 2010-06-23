@@ -10,6 +10,7 @@ gem 'bson_ext'
 gem 'mongoid', :git => 'git://github.com/durran/mongoid.git'
 gem 'carrierwave', :git => "git://github.com/jnicklas/carrierwave.git"
 gem 'mini_magick', :git => 'git://github.com/probablycorey/mini_magick.git'
+gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
 
 # Use unicorn as the web server
 # gem 'unicorn'
