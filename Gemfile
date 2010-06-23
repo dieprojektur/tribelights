@@ -24,8 +24,9 @@ end
 group :test do
   gem 'rspec-rails', '>=2.0.0.beta.12'
   gem 'rspec', '>=2.0.0.beta.12'
+  gem "capybara"
+  gem 'cucumber-rails', :git => 'git://github.com/aslakhellesoy/cucumber-rails.git'
   gem 'autotest'
   gem 'autotest-rails'
   gem 'factory_girl_rails'
 end
-
