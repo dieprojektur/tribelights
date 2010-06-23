@@ -29,4 +29,5 @@ group :test do
   gem 'autotest'
   gem 'autotest-rails'
   gem 'factory_girl_rails'
+  gem 'database_cleaner', :git => 'git://github.com/bmabey/database_cleaner.git'
 end

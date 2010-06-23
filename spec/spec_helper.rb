@@ -25,4 +25,13 @@ Rspec.configure do |config|
   # instead of true.
   # config.use_transactional_fixtures = true
   config.include(Capybara, :type => :integration)
+
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with(:truncation)
+  end
+  config.before(:each) do
+    DatabaseCleaner.clean
+    DatabaseCleaner.start
+  end
 end
