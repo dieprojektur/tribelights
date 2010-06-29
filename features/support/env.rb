@@ -10,7 +10,7 @@ require File.expand_path(File.dirname(__FILE__) + '/../../config/environment')
 require 'cucumber/formatter/unicode' # Remove this line if you don't want Cucumber Unicode support
 require 'cucumber/rails/rspec'
 require 'cucumber/rails/world'
-require 'cucumber/rails/active_record'
+#require 'cucumber/rails/mongoid'
 require 'cucumber/web/tableish'
 
 require 'capybara/rails'
@@ -50,8 +50,8 @@ ActionController::Base.allow_rescue = false
 
 # How to clean your database when transactions are turned off. See
 # http://github.com/bmabey/database_cleaner for more info.
-begin
-  require 'database_cleaner'
-  DatabaseCleaner.strategy = :truncation
-rescue LoadError => ignore_if_database_cleaner_not_present
+require 'database_cleaner'
+DatabaseCleaner.strategy = :truncation
+Before do
+  DatabaseCleaner.clean
 end
