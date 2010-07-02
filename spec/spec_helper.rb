@@ -27,11 +27,15 @@ Rspec.configure do |config|
   config.include(Capybara, :type => :integration)
 
   config.before(:suite) do
-    DatabaseCleaner.strategy = :transaction
-    DatabaseCleaner.clean_with(:truncation)
   end
   config.before(:each) do
+    DatabaseCleaner.strategy = :truncation
+    DatabaseCleaner.clean_with(:truncation)
     DatabaseCleaner.clean
     DatabaseCleaner.start
   end
 end
+class ActionController::TestCase
+    include Devise::TestHelpers
+  end
+

@@ -1,16 +1,16 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0.beta4'
+# gem 'rails', '3.0.0.beta4'
 
 # Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'bson_ext'
 
 gem 'mongoid', :git => 'git://github.com/durran/mongoid.git'
 gem 'carrierwave', :git => "git://github.com/jnicklas/carrierwave.git"
 gem 'mini_magick', :git => 'git://github.com/probablycorey/mini_magick.git'
-gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
+gem 'devise', :git => 'http://github.com/plataformatec/devise.git'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -29,6 +29,6 @@ group :test do
   gem 'cucumber-rails', :git => 'git://github.com/aslakhellesoy/cucumber-rails.git'
   gem 'autotest'
   gem 'autotest-rails'
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', '=1.0'
   gem 'database_cleaner', :git => 'git://github.com/bmabey/database_cleaner.git'
 end

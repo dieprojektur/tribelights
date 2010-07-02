@@ -8,4 +8,5 @@ vendor/bundler/
 vendor/cache/
 vendor/gems/
 vendor/specifications/
-
+rerun.txt
+Gemfile.lock
