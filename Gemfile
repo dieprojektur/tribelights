@@ -1,4 +1,5 @@
 source 'http://rubygems.org'
+#gem 'bundler', :git => 'git://github.com/carlhuda/bundler.git'
 
 # gem 'rails', '3.0.0.beta4'
 
@@ -6,6 +7,7 @@ source 'http://rubygems.org'
 gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'bson_ext'
+
 
 gem 'mongoid', :git => 'git://github.com/durran/mongoid.git'
 gem 'carrierwave', :git => "git://github.com/jnicklas/carrierwave.git"
