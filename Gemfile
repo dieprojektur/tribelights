@@ -29,6 +29,6 @@ group :test do
   gem 'cucumber-rails', :git => 'git://github.com/aslakhellesoy/cucumber-rails.git'
   gem 'autotest'
   gem 'autotest-rails'
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', '=1.0'
   gem 'database_cleaner', :git => 'git://github.com/bmabey/database_cleaner.git'
 end

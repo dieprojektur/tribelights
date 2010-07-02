@@ -6,5 +6,5 @@ class User
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  embeds_one :account
+  references_one :profile
 end
