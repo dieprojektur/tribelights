@@ -1,17 +1,16 @@
-= TRIBELIGHTS
+# TRIBELIGHTS
 
-> Seth Godin about Tribes: "All they have in common is the desire to change things, the ability to connect a tribe, and
-> the willingness to lead."
+> __Seth Godin about Tribes: "All they have in common is the desire to change things, the ability to connect a tribe,__
+> __and the willingness to lead."__
 
 Tribelights helps you to find and connect with people with the same desire and the willingness to lead. It needs a
 tribe to make the change.
 
 Illuminate your tribe @ tribelights.com
 
-== Contributors
+## Contributors
 
-Tribelights is based on an idea by Michael Laussegger and Anton Bangratz, and sponsored by Die Projektur GmbH
-(http://dieprojektur.com/)
+Tribelights is based on an idea by Michael Laussegger and Anton Bangratz, and sponsored by [Die Projektur GmbH](http://dieprojektur.com/)
 
 For a colorful world -
 and better working environments:
@@ -21,31 +20,31 @@ Michael Laussegger <michael.laussegger@dieprojektur.com>
 
 Copyright © 2010 Anton Bangratz & Michael Laussegger
 
-Source code at:					http://github.com/abangratz/tribelights
-Information and documentation:	http://tribelights.com/
-Development tribe:				http://tribelights.net/
-Add your tribe:					http://tribes.tribelights.com/
+ * Source code at:	[http://github.com/abangratz/tribelights](http://github.com/abangratz/tribelights)	
+ * Information and documentation:	[http://tribelights.com/](http://tribelights.com/)	
+ * Development tribe:	[http://tribelights.net/](http://tribelights.net/)	
+ * Add your tribe:	[http://tribes.tribelights.com/](http://tribes.tribelights.com)	
 
-== LICENSE and COPYING
+## LICENSE and COPYING
 
-This file is part of Knowledge Managment Network.
+This file is part of Tribelights Application.
 
-Knowledge Managment Network is free software: you can redistribute it and/or modify it under the terms of the GNU Affero
+Tribelights Application is free software: you can redistribute it and/or modify it under the terms of the GNU Affero
 General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your
 option) any later version.
 
-Knowledge Managment Network is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
+Tribelights Application is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
 the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License
 for more details.
 
-You should have received a copy of the GNU Affero General Public License along with Knowledge Managment Network in the
+You should have received a copy of the GNU Affero General Public License along with Tribelights Application in the
 file COPYING. If not, see <http://www.gnu.org/licenses/>.
 
-== Runtime Environment
+## Runtime Environment
 
 This web application is designed for Rails 3 (http://rubyonrails.com/) and MongoDB (http://mongodb.org/).
 
-== Contribution
+## Contribution
 
 Contribution is always welcome; in order to keep the whole process controllable, we would ask you to fork from our
 github project on (http://github.com/abangratz/tribelights) and drop us a notice to pull.

@@ -9,4 +9,6 @@ vendor/cache/
 vendor/gems/
 vendor/specifications/
 vendor/ruby/
+vendor/plugins/
+coverage/
 rerun.txt

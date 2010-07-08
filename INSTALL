@@ -1,16 +1,17 @@
-INSTALLING INSTRUCTIONS
+# INSTALLING INSTRUCTIONS
 
 These are basic installing instructions for this project, tested on (x)ubuntu 10.94 and Debian squeeze/sid.
 
-System Prerequisites (for nokogiri):
+System Prerequisites (for nokogiri) and database:
 
  * zlib1g-dev
  * libxslt-dev
  * libxml2-dev
+ * mongodb
 
 Example: 
 
-	aptitude install zlib1g-dev libxml2-dev libxslt-dev
+	aptitude install zlib1g-dev libxml2-dev libxslt-dev mongodb
 
 Gem Prerequisites:
 
