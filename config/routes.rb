@@ -1,10 +1,11 @@
 KMNetwork::Application.routes.draw do |map|
 
-  resources :profiles
 
-  resource :account #, :only => [:index, :edit, :new, :destroy, :show]
 
-  resource :user, :only => [:edit, :new]
+  resource :user, :only => [:edit, :new] do
+    resource :profile
+  end
+
   resources :welcome, :only => [:index]
   devise_for :users
 

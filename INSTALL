@@ -1,0 +1,38 @@
+# INSTALLING INSTRUCTIONS
+
+These are basic installing instructions for this project, tested on (x)ubuntu 10.94 and Debian squeeze/sid.
+
+System Prerequisites (for nokogiri) and database:
+
+ * zlib1g-dev
+ * libxslt-dev
+ * libxml2-dev
+ * mongodb
+
+Example: 
+
+	aptitude install zlib1g-dev libxml2-dev libxslt-dev mongodb
+
+Gem Prerequisites:
+
+	gem install rails3b rspec --no-rdoc -no-ri
+
+bundler (http://github.com/carlhuda/bundler) >= 1.0.0.pre.3
+
+Direct installation:
+    cd ~
+	mkdir -p build/gems
+	cd build/gems
+	git clone git://github.com/carlhuda/bundler.git
+	cd bundler
+	rake gem
+	sudo gem install pkg/bundler-1.0.0.beta.3.pre.gem
+
+Then, using bundler to update and install the environment:
+
+	bundle install vendor
+
+Check the bundle:
+
+	bundle exec spec
+	bundle exec cucumber

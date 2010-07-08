@@ -65,5 +65,8 @@ namespace :spec do
     ::CodeStatistics::TEST_TYPES << "Routing specs" if File.exist?('spec/routing')
     ::CodeStatistics::TEST_TYPES << "Request specs" if File.exist?('spec/requests')
   end
+  desc  "Run all specs with rcov"
+  RSpec::Core::RakeTask.new(:rcov => spec_prereq) do |t|
+    t.rcov = true
+  end
 end
-

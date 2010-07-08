@@ -2,9 +2,7 @@ require 'spec_helper'
 
 describe "profiles/new.html.erb" do
   before(:each) do
-    assign(:profile, stub_model(Profile,
-      :new_record? => true
-    ))
+    assign(:profile, Factory.build(:profile))
   end
 
   it "renders new profile form" do

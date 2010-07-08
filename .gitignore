@@ -8,5 +8,8 @@ vendor/bundler/
 vendor/cache/
 vendor/gems/
 vendor/specifications/
+vendor/ruby/
+vendor/plugins/
+coverage/
 rerun.txt
 Gemfile.lock
