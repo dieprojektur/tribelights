@@ -1,13 +1,17 @@
-== Knowledge Management Network
+= TRIBELIGHTS
 
-This web application is providing you with a means to share knowledge. We are convinced that Knowledge is Information
-paired with Experience. In Knowledge Management, this is often neglected, and writing down explicit information is
-winning over the need to communicate.
+> Seth Godin about Tribes: "All they have in common is the desire to change things, the ability to connect a tribe, and
+> the willingness to lead."
 
-We are well aware that communication on a personal level is often impossible, especially in larger companies, or
-distributed global companies, or in projects that span multiple apartments and/or companies. Therefor we want to provide
-you with a simple means to communicate on large scales while collaboratively creating the information to keep to create
-a pool of knowledge together with the social interaction necessary.
+Tribelights helps you to find and connect with people with the same desire and the willingness to lead. It needs a
+tribe to make the change.
+
+Illuminate your tribe @ tribelights.com
+
+== Contributors
+
+Tribelights is based on an idea by Michael Laussegger and Anton Bangratz, and sponsored by Die Projektur GmbH
+(http://dieprojektur.com/)
 
 For a colorful world -
 and better working environments:
@@ -16,6 +20,11 @@ Anton Bangratz <anton.bangratz@gmail.com>
 Michael Laussegger <michael.laussegger@dieprojektur.com>
 
 Copyright © 2010 Anton Bangratz & Michael Laussegger
+
+Source code at:					http://github.com/abangratz/tribelights
+Information and documentation:	http://tribelights.com/
+Development tribe:				http://tribelights.net/
+Add your tribe:					http://tribes.tribelights.com/
 
 == LICENSE and COPYING
 
@@ -39,6 +48,6 @@ This web application is designed for Rails 3 (http://rubyonrails.com/) and Mongo
 == Contribution
 
 Contribution is always welcome; in order to keep the whole process controllable, we would ask you to fork from our
-github project on (TODO: add URL) and drop us a notice to pull.
+github project on (http://github.com/abangratz/tribelights) and drop us a notice to pull.
 
 Translation efforts to other languages are always welcome.
