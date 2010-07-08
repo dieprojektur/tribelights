@@ -1,7 +1,4 @@
 source 'http://rubygems.org'
-#gem 'bundler', :git => 'git://github.com/carlhuda/bundler.git'
-
-# gem 'rails', '3.0.0.beta4'
 
 # Bundle edge Rails instead:
 gem 'rails', :git => 'git://github.com/rails/rails.git'
