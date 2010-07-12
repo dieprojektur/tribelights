@@ -2,7 +2,7 @@ TribeLights::Application.routes.draw do |map|
 
 
 
-  resource :user, :only => [:edit, :new] do
+  resource :user, :only => [] do
     resource :profile
   end
 

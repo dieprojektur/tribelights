@@ -1,19 +1,9 @@
 class ProfilesController < ApplicationController
-  # GET /profiles
-  # GET /profiles.xml
-  def index
-    @profiles = Profile.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @profiles }
-    end
-  end
-
-  # GET /profiles/1
-  # GET /profiles/1.xml
+  # GET /user/profile
+  # GET /user/profile.xml
   def show
-    @profile = Profile.find(params[:id])
+    @profile = current_user.profile
 
     respond_to do |format|
       format.html # show.html.erb

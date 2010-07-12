@@ -1,9 +1,9 @@
 require 'spec_helper'
 
 describe "Profiles" do
-  describe "GET /profiles" do
+  describe "GET /user/profile" do
     it "works! (now write some real specs)" do
-      get profiles_path
+      get user_profile_path
     end
   end
 end

@@ -1,6 +1,4 @@
 <h1>Editing profile</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @profile %> |
+<%= form_for @profile, :url => user_profile_path(@profile) do |f| %>
+<% end %>
 <%= link_to 'Back', user_profile_path %>
