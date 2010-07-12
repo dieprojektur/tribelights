@@ -179,6 +179,8 @@ GEM
       polyglot (>= 0.3.1)
     trollop (1.16.2)
     tzinfo (0.3.22)
+    unicorn (1.1.1)
+      rack
     warden (0.10.7)
       rack (>= 1.0.0)
     webrat (0.7.1)
@@ -209,3 +211,4 @@ DEPENDENCIES
   rcov_rails
   rspec (>= 2.0.0.beta.12)
   rspec-rails (>= 2.0.0.beta.12)
+  unicorn

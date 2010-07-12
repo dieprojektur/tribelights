@@ -12,7 +12,7 @@ gem 'mini_magick', :git => 'git://github.com/probablycorey/mini_magick.git'
 gem 'devise', :git => 'http://github.com/plataformatec/devise.git'
 
 # Use unicorn as the web server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Deploy with Capistrano
 gem 'capistrano'
