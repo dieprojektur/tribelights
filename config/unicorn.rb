@@ -13,7 +13,7 @@ preload_app true
 timeout 30
 
 # Listen on a Unix data socket
-listen 'tmp/sockets/unicorn.sock', :backlog => 2048
+listen 'unix:tmp/sockets/unicorn.sock', :backlog => 2048
 
 
 before_fork do |server, worker|
