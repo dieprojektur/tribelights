@@ -7,7 +7,7 @@ describe Profile do
     profile.should_not be_valid
   end
   it "should have versions" do
-    user = Factory(:valid_user)
+    user = Factory.build(:valid_user)
     profile = Profile.new
     profile.name = Name.new
     profile.name.first = 'Jack'
