@@ -1,4 +1,4 @@
-KMNetwork::Application.routes.draw do |map|
+TribeLights::Application.routes.draw do |map|
 
 
 

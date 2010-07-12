@@ -7,7 +7,7 @@ Given /^I have one user with email "(.+?)" and password "(.+?)"$/ do |email,pass
 end
 
 Given /^I am logged in with email "(.+?)" and password "(.+?)"$/ do |email,password|
-  visit new_user_registration_url
+  visit new_user_session_url
   fill_in 'Email', :with => email
   fill_in 'Password', :with => password
   click_button "user_submit"
