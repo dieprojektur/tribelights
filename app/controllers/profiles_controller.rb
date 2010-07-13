@@ -11,37 +11,12 @@ class ProfilesController < ApplicationController
     end
   end
 
-  # GET /profiles/new
-  # GET /profiles/new.xml
-  def new
-    @profile = Profile.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @profile }
-    end
-  end
-
-  # GET /profiles/1/edit
+  # GET /user/profile/edit
   def edit
     @profile = Profile.find(params[:id])
   end
 
-  # POST /profiles
-  # POST /profiles.xml
-  def create
-    @profile = Profile.new(params[:profile])
-
-    respond_to do |format|
-      if @profile.save
-        format.html { redirect_to(@profile, :notice => 'Profile was successfully created.') }
-        format.xml  { render :xml => @profile, :status => :created, :location => @profile }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @profile.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
 
   # PUT /profiles/1
   # PUT /profiles/1.xml

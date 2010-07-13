@@ -12,7 +12,13 @@ describe ProfilesController do
     get :show
     response.should be_success
   end
-  it "should automatically create the profile" do
+  it "should edit only the users' profile" do 
+
+    @user = Factory.stub(:user)
+    @profile = Factory.stub(:profile)
+    @user.should_receive(:profile).with(no_args()).and_return(@profile)
+    sign_in :user, @user
+    get :show
+
   end
-  it "should edit only the users' profile"
 end

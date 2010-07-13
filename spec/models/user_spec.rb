@@ -16,6 +16,7 @@ describe User do
     profile = Factory.build(:empty_profile)
     Profile.should_receive(:create).with(no_args()).and_return(profile)
     user = Factory.build(:valid_user)
-    user.save.should_not be_nil
+    user.save.should be_true
+    user.profile.should == profile
   end
 end
