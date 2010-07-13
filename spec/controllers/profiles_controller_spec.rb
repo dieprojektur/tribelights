@@ -14,11 +14,12 @@ describe ProfilesController do
   end
   it "should edit only the users' profile" do 
 
-    @user = Factory.stub(:user)
-    @profile = Factory.stub(:profile)
-    @user.should_receive(:profile).with(no_args()).and_return(@profile)
+    @user = Factory.build(:valid_user)
+    @user.save.should be_true
+    @profile = Factory.build(:profile)
     sign_in :user, @user
-    get :show
+    get :edit
+    response.should be_success
 
   end
 end

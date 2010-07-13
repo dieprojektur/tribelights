@@ -1,0 +1,4 @@
+de:
+  date:
+    formats:
+      default: '%d.%m.%Y'

@@ -1,0 +1,6 @@
+en:
+  profiles:
+    show:
+      full_name:  Full Name
+      birthday: Birthday
+      profile_header: "{{email}}'s Profile"
