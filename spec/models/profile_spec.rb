@@ -22,4 +22,10 @@ describe Profile do
     profile.version.should == 2
     profile.versions.last.birthday.should == Date.parse('2010-07-01')
   end
+   it "should create an empty name on initializing" do
+     user = Factory.build(:valid_user, :email => 'testing@testing.test', :profile => Profile.new)
+     user.save
+     user.profile.name.should_not be_nil
+     user.profile.name.full.should be_nil 
+   end
 end

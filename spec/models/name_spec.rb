@@ -19,4 +19,8 @@ describe Name do
     name = Factory.build(:valid_name)
     name.full.should == name.first + ' ' + name.last
   end
+  it "should return nil if no name is set" do
+    name = Name.new
+    name.full.should be_nil
+  end
 end

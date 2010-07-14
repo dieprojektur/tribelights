@@ -15,17 +15,18 @@ class ProfilesController < ApplicationController
   # GET /user/profile/edit
   def edit
     @profile = current_user.profile
+    @name = @profile.name
   end
 
 
   # PUT /profiles/1
   # PUT /profiles/1.xml
   def update
-    @profile = Profile.find(params[:id])
+    @profile = current_user.profile
 
     respond_to do |format|
       if @profile.update_attributes(params[:profile])
-        format.html { redirect_to(@profile, :notice => 'Profile was successfully updated.') }
+        format.html { redirect_to(user_profile_url, :notice => 'Profile was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

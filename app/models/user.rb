@@ -8,7 +8,7 @@ class User
 
   references_one :profile
 
-  before_create :check_or_create_empty_profile
+  before_save :check_or_create_empty_profile
 
   private 
   def check_or_create_empty_profile

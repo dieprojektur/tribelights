@@ -8,7 +8,7 @@ class Name
   validates_presence_of :first, :last
 
   def full
-    self.first + ' ' + self.last
+    self.first + ' ' + self.last unless self.first.nil? || self.last.nil?
   end
   
 end

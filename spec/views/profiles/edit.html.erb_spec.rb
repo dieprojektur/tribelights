@@ -2,19 +2,26 @@ require 'spec_helper'
 
 describe "profiles/edit.html.erb" do
   before(:each) do
-    user = Factory(:valid_user)
-    profile = Factory.build(:profile)
-    user.profile = profile
+    user = Factory.build(:valid_user)
     user.save
-    profile.save
-
-    @profile = assign(:profile, profile)
+    @profile = assign(:profile, user.profile)
   end
 
   it "renders the edit profile form" do
     render
 
     rendered.should have_selector("form", :action => user_profile_path(@profile), :method => "post") do |form|
+      form.should have_selector("label", :for => 'profile_name_attributes_first' ) do |label|
+        label.text.should == t('profiles.edit.html.first_name')
+      end
+      form.should have_selector("label" , :for => 'profile_name_attributes_last') do |label|
+        label.text.should == t('profiles.edit.html.last_name')
+      end
+      form.should have_selector("label", :for => 'profile_birthday' ) do |label|
+        label.text.should == t('profiles.edit.html.birthday')
+      end
+      form.should have_selector("input", :type => 'text', :name => 'profile[name_attributes][first]' )
+      form.should have_selector("input", :type => 'text', :name => 'profile[name_attributes][last]' )
     end
   end
 end

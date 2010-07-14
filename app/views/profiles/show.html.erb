@@ -3,6 +3,6 @@
 <h1><%= t '.profile_header', :email => @profile.user.email %></h1>
 
 <p><%= t '.full_name' %>: <%= @profile.name.full %> </p>
-<p><%= t '.birthday' %>: <%= l @profile.birthday, :format => :long %> </p>
+<p><%= t '.birthday' %>: <%= l @profile.birthday, :format => :long unless @profile.birthday.nil? %> </p>
 
 <%= link_to 'Edit', edit_user_profile_path(@profile) %> |
