@@ -1,12 +1,12 @@
 <h1>Editing profile</h1>
 <%= form_for @profile, :url => user_profile_path(@profile) do |f| %>
   <%= f.fields_for :name do |name_form| %>
-    <%=  name_form.label :first, t('.first_name') %>
+    <%=  name_form.label :first, t('profiles.edit.first_name') %>
     <%=  name_form.text_field :first  %>
-    <%=  name_form.label :last, t('.last_name') %>
+    <%=  name_form.label :last, t('profiles.edit.last_name') %>
     <%=  name_form.text_field :last  %>
   <% end %>
-  <%= f.label :birthday, t('.birthday') %>
+  <%= f.label :birthday, t('profiles.edit.birthday') %>
   <%= f.date_select :birthday, :start_year => 1880 %>
   <%= f.submit %>
 <% end %>

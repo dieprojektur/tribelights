@@ -26,16 +26,14 @@ Rspec.configure do |config|
   # config.use_transactional_fixtures = true
   config.include(Capybara, :type => :integration)
 
-  config.before(:suite) do
-  end
   config.before(:each) do
     DatabaseCleaner.strategy = :truncation
     DatabaseCleaner.clean_with(:truncation)
-    DatabaseCleaner.clean
+  #  DatabaseCleaner.clean
     DatabaseCleaner.start
   end
 end
 class ActionController::TestCase
-    include Devise::TestHelpers
-  end
+  include Devise::TestHelpers
+end
 

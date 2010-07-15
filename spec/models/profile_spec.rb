@@ -7,7 +7,7 @@ describe Profile do
     profile.should_not be_valid
   end
   it "should have versions" do
-    user = Factory.build(:valid_user)
+    user = Factory.build(:user)
     profile = Profile.new
     profile.name = Name.new
     profile.name.first = 'Jack'
@@ -23,7 +23,7 @@ describe Profile do
     profile.versions.last.birthday.should == Date.parse('2010-07-01')
   end
    it "should create an empty name on initializing" do
-     user = Factory.build(:valid_user, :email => 'testing@testing.test', :profile => Profile.new)
+     user = Factory.build(:valid_user, :profile => Profile.new)
      user.save
      user.profile.name.should_not be_nil
      user.profile.name.full.should be_nil 
