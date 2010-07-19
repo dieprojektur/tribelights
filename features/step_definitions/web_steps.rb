@@ -218,3 +218,17 @@ Then /^show me the page$/ do
   save_and_open_page
 end
 
+
+Given /^I have one user with email "(.+?)" and password "(.+?)"$/ do |email,password|
+  @user = Factory.create(:user, :email => email, :password => password, :password_confirmation => password)
+  @user.profile = Profile.new
+  @user.save
+  @user.profile.save
+end
+
+Given /^I am logged in with email "(.+?)" and password "(.+?)"$/ do |email,password|
+  visit new_user_session_url
+  fill_in 'Email', :with => email
+  fill_in 'Password', :with => password
+  click_button "user_submit"
+end

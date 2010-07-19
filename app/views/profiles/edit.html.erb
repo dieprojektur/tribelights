@@ -1,5 +1,5 @@
 <h1>Editing profile</h1>
-<%= form_for @profile, :url => user_profile_path(@profile) do |f| %>
+<%= form_for @profile, {:controller => 'profiles', :action => 'update', :url => profile_path} do |f| %>
   <%= f.fields_for :name do |name_form| %>
     <%=  name_form.label :first, t('profiles.edit.first_name') %>
     <%=  name_form.text_field :first  %>
@@ -10,4 +10,4 @@
   <%= f.date_select :birthday, :start_year => 1880 %>
   <%= f.submit %>
 <% end %>
-<%= link_to 'Back', user_profile_path %>
+<%= link_to 'Back', profile_path %>

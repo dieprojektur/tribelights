@@ -7,4 +7,4 @@ en:
     show:
       full_name:  Full Name
       birthday: Birthday
-      profile_header: "{{email}}'s Profile"
+      profile_header: "%{email}'s Profile"

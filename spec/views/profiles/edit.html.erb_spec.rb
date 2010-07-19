@@ -13,7 +13,7 @@ describe "profiles/edit.html.erb" do
   it "renders the edit profile form" do
     render
 
-    rendered.should have_selector("form", :action => user_profile_path(@profile), :method => "post") do |form|
+    rendered.should have_selector("form", :action => profile_path, :method => "post") do |form|
       form.should have_selector("label", :for => 'profile_name_attributes_first' ) do |label|
         label.text.should == t('profiles.edit.first_name')
       end

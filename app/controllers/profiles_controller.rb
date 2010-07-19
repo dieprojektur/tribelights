@@ -15,7 +15,6 @@ class ProfilesController < ApplicationController
   # GET /user/profile/edit
   def edit
     @profile = current_user.profile
-    @name = @profile.name
   end
 
 
@@ -25,8 +24,9 @@ class ProfilesController < ApplicationController
     @profile = current_user.profile
 
     respond_to do |format|
+      logger.debug 'updating'
       if @profile.update_attributes(params[:profile])
-        format.html { redirect_to(user_profile_url, :notice => 'Profile was successfully updated.') }
+        format.html { redirect_to(profile_url, :notice => 'Profile was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

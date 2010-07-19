@@ -3,4 +3,4 @@ de:
     show:
       full_name: Name
       birthday: Geburtsdatum
-      profile_header: "Profil von {{email}}"
+      profile_header: "Profil von %{email}"

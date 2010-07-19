@@ -3,8 +3,8 @@ TribeLights::Application.routes.draw do |map|
 
 
   resource :user, :only => [] do
-    resource :profile
   end
+  resource :profile
 
   resources :welcome, :only => [:index]
   devise_for :users
