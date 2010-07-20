@@ -28,4 +28,15 @@ describe Profile do
      user.profile.name.should_not be_nil
      user.profile.name.full.should be_nil 
    end
+   it "should create a public profile on saving" do
+     user = Factory.build(:valid_user, :profile => Profile.new)
+     user.profile.create_name(:first => "Check", :last => "Bauer" )
+     user.save
+
+     user.profile.public_profile.should_not be_nil
+     user.profile.public_profile.fullname.should == "Check Bauer"
+     
+
+   end
+
 end
