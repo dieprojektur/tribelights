@@ -7,6 +7,7 @@ TribeLights::Application.routes.draw do |map|
   resource :profile
 
   resources :welcome, :only => [:index]
+  resources :public_profiles, :only => [:index]
   devise_for :users
 
   get "welcome/index"

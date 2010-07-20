@@ -1,0 +1,7 @@
+<h1>Profile List</h1>
+  <% @public_profiles.each do |profile| %>
+    <div class="profile">
+      <div><%= t('.fullname') %>:<%= profile.name %></div>
+      <div><%= t('.birthday') %>:<%= l profile.birthday unless profile.birthday.nil?%></div>
+    </div>
+  <% end %>

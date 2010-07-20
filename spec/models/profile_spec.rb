@@ -34,7 +34,7 @@ describe Profile do
      user.save
 
      user.profile.public_profile.should_not be_nil
-     user.profile.public_profile.fullname.should == "Check Bauer"
+     user.profile.public_profile.name.should == "Check Bauer"
      
 
    end

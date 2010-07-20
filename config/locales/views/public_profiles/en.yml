@@ -1,0 +1,5 @@
+en:
+  public_profiles:
+    index:
+      fullname: Full Name
+      birthday: Birthday

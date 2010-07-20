@@ -220,10 +220,8 @@ end
 
 
 Given /^I have one user with email "(.+?)" and password "(.+?)"$/ do |email,password|
-  @user = Factory.create(:user, :email => email, :password => password, :password_confirmation => password)
-  @user.profile = Profile.new
+  @user = Factory.create(:user, :email => email, :password => password, :password_confirmation => password, :profile => Profile.create)
   @user.save
-  @user.profile.save
 end
 
 Given /^I am logged in with email "(.+?)" and password "(.+?)"$/ do |email,password|
@@ -232,3 +230,8 @@ Given /^I am logged in with email "(.+?)" and password "(.+?)"$/ do |email,passw
   fill_in 'Password', :with => password
   click_button "user_submit"
 end
+
+Given /^I am not logged in$/ do
+  visit destroy_user_session_url
+end
+

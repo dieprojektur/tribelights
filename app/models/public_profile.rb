@@ -4,4 +4,5 @@ class PublicProfile
 
   field :name, :type => String
   field :birthday, :type => Date
+  referenced_in :profile
 end

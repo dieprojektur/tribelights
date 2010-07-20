@@ -6,9 +6,8 @@ class Profile
   accepts_nested_attributes_for :name
   referenced_in :user
   references_one :public_profile
-  #after_save :create_public_profile
   validates_presence_of :user
-  before_save :check_and_initialize_name
+  before_save :check_and_initialize_name, :create_public_profile
 
   protected
   def check_and_initialize_name
