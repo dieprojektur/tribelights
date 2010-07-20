@@ -1,0 +1,299 @@
+commit de41f60298482aa91ad6ec084b34f3c0e82dd156
+Author: Anton Bangratz <anton.bangratz@gmail.com>
+Date:   Tue Jul 20 16:25:12 2010 +0200
+
+    Public profiles: autocreate, bugfix, i18n, auth
+    
+    - Fixed autosaving/creation of public profiles
+    
+    - Added new features for authentication checks
+    
+    - Added public profiles list
+    
+    - Refined cucumber steps for creating users
+
+commit cd43e2367d4d86720dde6dbb7d42d8d08d9e3122
+Author: Michael Laussegger <michael.laussegger@dieprojektur.com>
+Date:   Tue Jul 20 12:19:04 2010 +0200
+
+    public profile saving (not working)
+
+commit c3a0b0f7f63263d556466a446c883ed05d72dcdd
+Merge: 83bcb16 123a05f
+Author: Michael Laussegger <michael.laussegger@dieprojektur.com>
+Date:   Tue Jul 20 11:58:11 2010 +0200
+
+    Merge branch 'master' of github.com:abangratz/tribelights
+
+commit 83bcb1617558c4cc43eadc17b39a059d3c080c43
+Author: Michael Laussegger <michael.laussegger@dieprojektur.com>
+Date:   Tue Jul 20 11:55:56 2010 +0200
+
+    spec for saving public profile
+
+commit 123a05f2dd7575e7d7544ddd7f6f7d909b1dbcb4
+Author: Anton Bangratz <anton.bangratz@gmail.com>
+Date:   Tue Jul 20 11:50:00 2010 +0200
+
+    new public profile
+
+commit 54d5c00fe73ce8f16871f57b0fc870ba2a6bbd47
+Author: Anton Bangratz <anton.bangratz@gmail.com>
+Date:   Tue Jul 20 10:45:30 2010 +0200
+
+    added my mongoid fork to Gemfile
+
+commit 73f1364150b9aabc01e6c7cd84481a1aaf97f475
+Author: Anton Bangratz <anton.bangratz@gmail.com>
+Date:   Mon Jul 19 17:24:31 2010 +0200
+
+    updated Rakefile and spec_helper to remove deprecation notices
+
+commit 20f3f0059f800a1f95ded7cb432705598a2054e5
+Author: Anton Bangratz <anton.bangratz@twincode.net>
+Date:   Mon Jul 19 15:49:36 2010 +0200
+
+    cleaned up tests/routes, deprecation warnings etc.
+
+commit bf27e7e5639784bf467da8b5ca0332b9e7ca697a
+Author: Anton Bangratz <anton.bangratz@twincode.net>
+Date:   Mon Jul 19 10:11:36 2010 +0200
+
+    added date selector for profile/edit spec
+
+commit d734805fd0de091c3508eba7bf2dbfe952c19de3
+Author: Anton Bangratz <anton.bangratz@twincode.net>
+Date:   Thu Jul 15 17:35:09 2010 +0200
+
+    fixing testing bugs
+
+commit a542fc552770a0de78d59ecce8dc69e62fe088dd
+Author: Anton Bangratz <anton.bangratz@gmail.com>
+Date:   Wed Jul 14 12:37:40 2010 +0200
+
+    profile editing
+
+commit 041828d52811c237dbaf4723aac49f84f84ecfd5
+Author: Anton Bangratz <anton.bangratz@twincode.net>
+Date:   Tue Jul 13 16:04:25 2010 +0200
+
+    refined and broke profile specs
+
+commit 797ada21d815e14de9ff75426263a9196a1d29a9
+Author: Anton Bangratz <anton.bangratz@gmail.com>
+Date:   Tue Jul 13 11:00:39 2010 +0200
+
+    improved model specs
+
+commit ce1544d197ca231b501475575efb04898b260195
+Author: Anton Bangratz <anton.bangratz@gmail.com>
+Date:   Tue Jul 13 09:31:19 2010 +0200
+
+    Added tmp to .gitignore
+
+commit f3dbc4c6577134670aaa7fbb9b539edc4f547f22
+Author: Anton Bangratz <anton.bangratz@gmail.com>
+Date:   Tue Jul 13 09:30:06 2010 +0200
+
+    Fixed tabbing
+
+commit 63bd2287815477a327140d5790b4ca3a92887603
+Author: Anton Bangratz <anton.bangratz@twincode.net>
+Date:   Mon Jul 12 22:08:08 2010 +0200
+
+    added profile spec, adding automation and controller specs, fixed factories, tried to fix rake task for cucumber
+
+commit a71e547d4c9035c638d7e0fbe7b65d7f124d9f7b
+Author: Anton Bangratz <anton.bangratz@twincode.net>
+Date:   Mon Jul 12 18:58:27 2010 +0200
+
+    fixed mongoid production setup
+
+commit 2ef80e7b503fe90da7b10879a8cf6a3aeb92449e
+Author: Anton Bangratz <anton.bangratz@twincode.net>
+Date:   Mon Jul 12 18:48:06 2010 +0200
+
+    fixed unicorn typo
+
+commit f65831f376a2bca300383ce858331d3006c42d3c
+Author: Anton Bangratz <anton.bangratz@twincode.net>
+Date:   Mon Jul 12 18:44:39 2010 +0200
+
+    added unicorn gem
+
+commit c10c5e10a931ba88fce640a7e52f70ad1bad39df
+Author: Anton Bangratz <anton.bangratz@twincode.net>
+Date:   Mon Jul 12 18:34:36 2010 +0200
+
+    added unicorn config
+
+commit 607320dc8006c8cfdfdcd146235a7313b3780128
+Author: Anton Bangratz <anton.bangratz@twincode.net>
+Date:   Mon Jul 12 17:41:11 2010 +0200
+
+    started profile specs
+
+commit 722da767f0d9e0681ddee417f2c9f157efc71c19
+Author: Anton Bangratz <anton.bangratz@twincode.net>
+Date:   Mon Jul 12 13:16:14 2010 +0200
+
+    renamed to TribeLights internally, fixed feature steps and features, we have a first working solution!
+
+commit 9990dbfaf5ffc1a671c491e7edf0df9faa33b026
+Author: Anton Bangratz <anton.bangratz@twincode.net>
+Date:   Mon Jul 12 12:14:13 2010 +0200
+
+    removed all around deprecated AuthLogic stuff
+
+commit 9648cf355061308092cde96c7eacb13cb958fa9b
+Author: Anton Bangratz <anton.bangratz@twincode.net>
+Date:   Mon Jul 12 12:12:12 2010 +0200
+
+    changed gemfile, removed deprecated UserSession Model
+
+commit 813b7dd6b404568a8bb4e8c7fad9866cbde85a3a
+Merge: e21d7d7 88414ec
+Author: Anton Bangratz <anton.bangratz@twincode.net>
+Date:   Thu Jul 8 18:54:54 2010 +0200
+
+    switched back to master branch
+
+commit 88414ecdba8ea1f2f08991935e9d4f2c2cbfe3f5
+Author: Anton Bangratz <anton.bangratz@twincode.net>
+Date:   Thu Jul 8 18:42:04 2010 +0200
+
+    fixed Gemfile and Gemfile.lock
+
+commit ca166c6030bd0404815adc9d87d1cc1b2943e9b9
+Merge: 240c6a1 07f5ff1
+Author: Anton Bangratz <anton.bangratz@twincode.net>
+Date:   Thu Jul 8 18:25:04 2010 +0200
+
+    Merge branch 'devise' of git://github.com/abangratz/KM-Network into devise
+
+commit 240c6a1d3c39ea79d19064d18f1728f62a18f1bc
+Author: Anton Bangratz <anton.bangratz@twincode.net>
+Date:   Thu Jul 8 14:19:52 2010 +0200
+
+    added rcov, modified INSTALL and README
+
+commit 6236f0517cc726d767df8ca208fe4480c9889108
+Author: Anton Bangratz <anton.bangratz@gmail.com>
+Date:   Thu Jul 8 10:33:11 2010 +0200
+
+    Added INSTALL file, extended .gitignore, changed README
+
+commit 07f5ff14073ece94ab3e90cd1a0515a64a0ee3ed
+Author: Anton Bangratz <anton.bangratz@gmail.com>
+Date:   Fri Jul 2 17:32:42 2010 +0200
+
+    fixing profile specs and routing
+
+commit e21d7d7326734154481d70c1a9797ec80efaf0c0
+Merge: 00d04b6 1b7c1af
+Author: Anton Bangratz <anton.bangratz@gmail.com>
+Date:   Fri Jul 2 12:09:21 2010 +0200
+
+    Merged from devise branch
+
+commit 1b7c1afc39aa25296eb7bb9aa64a7e3cafccbb76
+Author: Anton Bangratz <anton.bangratz@gmail.com>
+Date:   Fri Jul 2 11:46:36 2010 +0200
+
+    removed account, added profile, first model specs
+
+commit 6f3d27e37137da1d7e312bd65739404cb98cbbce
+Author: Anton Bangratz <anton.bangratz@gmail.com>
+Date:   Fri Jul 2 09:22:20 2010 +0200
+
+    renamed README again for pretty parsing
+
+commit 9b2a5c5d4c51d3a66f6a49b39982e3e81071b13c
+Author: Anton Bangratz <anton.bangratz@gmail.com>
+Date:   Tue Jun 29 19:47:19 2010 +0200
+
+    added account starters
+
+commit 2eaba47085179abcf540d413107a22d42fa43aba
+Author: Anton Bangratz <anton.bangratz@gmail.com>
+Date:   Tue Jun 29 18:25:24 2010 +0200
+
+    cleaned up
+
+commit 3d9e04436f4e9d643d972cc6acb21ae4a47bd7e5
+Author: Anton Bangratz <anton.bangratz@gmail.com>
+Date:   Tue Jun 29 10:58:51 2010 +0200
+
+    working Gemfile and jquery config
+
+commit 00d04b6b29425d134715de079ce46c5db31ac3f3
+Author: Anton Bangratz <anton.bangratz@gmail.com>
+Date:   Tue Jun 29 10:05:05 2010 +0200
+
+    first authlogic steps
+
+commit 6f10453ca00ec00bd0a8c70f6778ef2d1488bc0e
+Author: Anton Bangratz <anton.bangratz@gmail.com>
+Date:   Wed Jun 23 19:28:56 2010 +0200
+
+    added authlogic
+
+commit 564f67b584439107161dcbc81b727fc5d73b56fe
+Author: Anton Bangratz <anton.bangratz@gmail.com>
+Date:   Wed Jun 23 18:58:19 2010 +0200
+
+    integrated devise and tests
+
+commit 4b5e6c711c2107454d3e072958c755dddac9de1a
+Author: Anton Bangratz <anton.bangratz@gmail.com>
+Date:   Wed Jun 23 16:58:53 2010 +0200
+
+    added devise gem
+
+commit b3978df936f84d3a4cd8dc612bfd40a9d66ddfbb
+Author: Anton Bangratz <anton.bangratz@gmail.com>
+Date:   Wed Jun 23 16:38:07 2010 +0200
+
+    VERSION file added
+
+commit c8ecd4f1ec673167b184dbd70646ef4cbbdad7c8
+Author: Anton Bangratz <anton.bangratz@gmail.com>
+Date:   Wed Jun 23 16:36:57 2010 +0200
+
+    renamed README
+
+commit 61e4b0a92551af721d7f5f945e4234ea0d90e590
+Author: Anton Bangratz <anton.bangratz@gmail.com>
+Date:   Wed Jun 23 16:35:38 2010 +0200
+
+    changed README and COPYING (License)
+
+commit c486748c0ec1fa333876902c1e8eca89f56f903f
+Author: Anton Bangratz <anton.bangratz@gmail.com>
+Date:   Wed Jun 23 16:35:05 2010 +0200
+
+    added database cleaner
+
+commit da93da2d3e6bd6f7d5a5ac7124231b84099bd144
+Author: Anton Bangratz <anton.bangratz@gmail.com>
+Date:   Wed Jun 23 15:52:28 2010 +0200
+
+    spec Capybara integration
+
+commit e47c990e04da6262e4a1f99d3bc6454cdae82732
+Author: Anton Bangratz <anton.bangratz@gmail.com>
+Date:   Wed Jun 23 15:31:14 2010 +0200
+
+    cucumber and jquery added
+
+commit 6eafe146fab2e70f595699d529c415c5c44a3d47
+Author: Anton Bangratz <anton.bangratz@gmail.com>
+Date:   Wed Jun 23 11:56:29 2010 +0200
+
+    added vendor directories to gitignore
+
+commit 088c5708daeff0075e399c07824979820190ded9
+Author: Anton Bangratz <anton.bangratz@gmail.com>
+Date:   Wed Jun 23 11:54:23 2010 +0200
+
+    Initial commit after setting up
