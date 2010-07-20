@@ -1,4 +1,15 @@
 GIT
+  remote: git://github.com/abangratz/mongoid.git
+  revision: f835979
+  specs:
+    mongoid (2.0.0.beta9)
+      activemodel (~> 3.0.0.beta)
+      bson (~> 1.0.4)
+      mongo (~> 1.0.5)
+      tzinfo (~> 0.3.22)
+      will_paginate (~> 3.0.pre)
+
+GIT
   remote: git://github.com/aslakhellesoy/cucumber-rails.git
   revision: 0fe7e4f
   specs:
@@ -10,17 +21,6 @@ GIT
   revision: 7ea99d7
   specs:
     database_cleaner (0.5.2)
-
-GIT
-  remote: git://github.com/durran/mongoid.git
-  revision: a5abe21
-  specs:
-    mongoid (2.0.0.beta9)
-      activemodel (~> 3.0.0.beta)
-      bson (~> 1.0.3)
-      mongo (~> 1.0.3)
-      tzinfo (~> 0.3.22)
-      will_paginate (~> 3.0.pre)
 
 GIT
   remote: git://github.com/jnicklas/carrierwave.git
@@ -97,8 +97,8 @@ GEM
     autotest-rails (4.1.0)
       ZenTest
     bcrypt-ruby (2.1.2)
-    bson (1.0.3)
-    bson_ext (1.0.1)
+    bson (1.0.4)
+    bson_ext (1.0.4)
     builder (2.1.2)
     capistrano (2.5.19)
       highline
@@ -139,8 +139,8 @@ GEM
       mime-types
       treetop (>= 1.4.5)
     mime-types (1.16)
-    mongo (1.0.3)
-      bson (= 1.0.3)
+    mongo (1.0.5)
+      bson (>= 1.0.4)
     net-scp (1.0.2)
       net-ssh (>= 1.99.1)
     net-sftp (2.0.4)
@@ -195,7 +195,7 @@ PLATFORMS
 DEPENDENCIES
   autotest
   autotest-rails
-  bson_ext
+  bson_ext (>= 1.0.4)
   capistrano
   capybara
   carrierwave!
