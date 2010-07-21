@@ -1,3 +1,5 @@
+require 'carrierwave/orm/mongoid'
+
 class Profile
   include Mongoid::Document
   include Mongoid::Versioning
@@ -8,6 +10,8 @@ class Profile
   references_one :public_profile
   validates_presence_of :user
   before_save :check_and_initialize_name, :create_public_profile
+
+  mount_uploader :picture, AvatarUploader
 
   protected
   def check_and_initialize_name
