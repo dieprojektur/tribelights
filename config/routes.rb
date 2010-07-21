@@ -1,6 +1,7 @@
 TribeLights::Application.routes.draw do |map|
 
 
+  match "/images/uploads/*path" => "gridfs#serve"
 
   resource :user, :only => [] do
   end

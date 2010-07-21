@@ -1,15 +1,23 @@
 <h1>Editing profile</h1>
 <div class="form edit">
-<%= form_for @profile, {:controller => 'profiles', :action => 'update', :url => profile_path} do |f| %>
-  <%= f.fields_for :name do |name_form| %>
-    <div class="label"><%=  name_form.label :first, t('profiles.edit.first_name') %></div>
-    <div class="field"><%=  name_form.text_field :first  %></div>
-    <div class="label"><%=  name_form.label :last, t('profiles.edit.last_name') %></div>
-    <div class="field"><%=  name_form.text_field :last  %></div>
+  <%= form_for @profile, {:controller => 'profiles', :action => 'update', :url => profile_path, :html => {:multipart => true}} do |f| %>
+    <%= f.fields_for :name do |name_form| %>
+      <div class="label"><%=  name_form.label :first, t('profiles.edit.first_name') %></div>
+      <div class="field"><%=  name_form.text_field :first  %></div>
+      <div class="label"><%=  name_form.label :last, t('profiles.edit.last_name') %></div>
+      <div class="field"><%=  name_form.text_field :last  %></div>
+    <% end %>
+    <div class="label"><%= f.label :birthday, t('profiles.edit.birthday') %></div>
+    <div class="field"><%= f.date_select :birthday, :start_year => 1880 %></div>
+    <div class="avatar">
+      <p>
+      <%= f.label :picture %>
+      <%= image_tag(@profile.picture_url) if @profile.picture? %>
+      <%= f.file_field :picture %>
+      <%= f.hidden_field :picture_cache %>
+      </p>
+    </div>
+    <div class="field"><%= f.submit %></div>
   <% end %>
-  <div class="label"><%= f.label :birthday, t('profiles.edit.birthday') %></div>
-  <div class="field"><%= f.date_select :birthday, :start_year => 1880 %></div>
-  <div class="field"><%= f.submit %></div>
-<% end %>
 </div>
 <%= link_to 'Back', profile_path %>
