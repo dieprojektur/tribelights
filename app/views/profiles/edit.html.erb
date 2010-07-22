@@ -12,7 +12,7 @@
     <div class="avatar">
       <p>
       <%= f.label :picture %>
-      <%= image_tag(@profile.picture_url) if @profile.picture? %>
+      <%= image_tag(@profile.picture_url) %>
       <%= f.file_field :picture %>
       <%= f.hidden_field :picture_cache %>
       </p>

@@ -1,7 +1,7 @@
 <h1>Profile List</h1>
   <% @public_profiles.each do |profile| %>
     <div class="profile">
-      <div><%= image_tag profile.profile.picture.thumb.url if profile.profile.picture? %>
+      <div><%= image_tag profile.thumb_path || '/images/thumb_default.png' %>
       <%= t('.fullname') %>:<%= profile.name %>
       <%= t('.birthday') %>:<%= l profile.birthday unless profile.birthday.nil?%></div>
     </div>

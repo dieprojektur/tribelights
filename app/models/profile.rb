@@ -20,12 +20,16 @@ class Profile
 
   def create_public_profile
     if self.public_profile.nil? then
-      self.public_profile = PublicProfile.create(:name => self.name.full,
-       :birthday => self.birthday, :profile => self)
+      self.public_profile = PublicProfile.new(:name => self.name.full,
+       :birthday => self.birthday,:profile => self)
     else
       self.public_profile.attributes =  {:name => self.name.full,
        :birthday => self.birthday}
-      self.public_profile.save
     end
+    if self.picture?
+      self.public_profile.picture_path = self.picture.url
+      self.public_profile.thumb_path = self.picture.thumb.url
+    end
+    self.public_profile.save
   end
 end

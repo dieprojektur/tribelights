@@ -5,9 +5,11 @@ describe "public_profiles/index.html.erb" do
     pp1 = mock(:profile1)
     pp1.should_receive(:name).and_return('Profile One')
     pp1.should_receive(:birthday).at_least(:once).and_return(Date.parse('2001-01-01'))
+    pp1.should_receive(:thumb_path).twice.and_return('notfound')
     pp2 = mock(:profile2)
     pp2.should_receive(:name).and_return('Profile Two')
     pp2.should_receive(:birthday).at_least(:once).and_return(Date.parse('2001-10-10'))
+    pp2.should_receive(:thumb_path).twice.and_return('notfound')
     profiles =  [pp1, pp2]
     assign(:public_profiles, profiles)
     render
