@@ -9,3 +9,4 @@ en:
       header: "%{email}'s Profile"
     edit:
       header: "Edit Profile"
+      errors: '%{errors} prohibited this profile from being saved'
