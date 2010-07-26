@@ -1,0 +1,6 @@
+    <div class="public_profile">
+      <div><%= image_tag public_profile.thumb_path || '/images/thumb_default.png' %>
+      <%= t('.fullname') %>:<%= public_profile.name %>
+      <%= t('.birthday') %>:<%= l public_profile.birthday unless public_profile.birthday.nil?%></div>
+    </div>
+

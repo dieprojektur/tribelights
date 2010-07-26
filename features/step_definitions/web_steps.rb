@@ -225,9 +225,9 @@ Given /^I have one user with email "(.+?)" and password "(.+?)"$/ do |email,pass
 end
 
 Given /^I am logged in with email "(.+?)" and password "(.+?)"$/ do |email,password|
-  visit new_user_session_url
-  fill_in 'Email', :with => email
-  fill_in 'Password', :with => password
+  visit '/users/sign_in'
+  fill_in 'user[email]', :with => email
+  fill_in 'user[password]', :with => password
   click_button "user_submit"
 end
 

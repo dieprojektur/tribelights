@@ -8,7 +8,11 @@ TribeLights::Application.routes.draw do |map|
   resource :profile
 
   resources :welcome, :only => [:index]
-  resources :public_profiles, :only => [:index]
+  resources :public_profiles, :only => [:index, :search] do
+    collection do
+      post :search
+    end
+  end
   devise_for :users
 
   get "welcome/index"
