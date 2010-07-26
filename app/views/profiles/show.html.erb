@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= t '.profile_header', :email => @profile.user.email %></h1>
+<h1><%= t 'profiles.show.header', :email => @profile.user.email %></h1>
 <div>
   <%= image_tag(@profile.picture_url) %>
 </div>
-<p><%= t '.full_name' %>: <%= @profile.name.full %> </p>
-<p><%= t '.birthday' %>: <%= l @profile.birthday, :format => :long unless @profile.birthday.nil? %> </p>
+<p><%= t 'profiles.full_name' %>: <%= @profile.name.full %> </p>
+<p><%= t 'profiles.birthday' %>: <%= l @profile.birthday, :format => :long unless @profile.birthday.nil? %> </p>
 
 <%= link_to 'Edit', edit_profile_path %> |

@@ -1,8 +1,11 @@
 <h1>Profile List</h1>
-  <% @public_profiles.each do |profile| %>
-    <div class="profile">
-      <div><%= image_tag profile.thumb_path || '/images/thumb_default.png' %>
-      <%= t('.fullname') %>:<%= profile.name %>
-      <%= t('.birthday') %>:<%= l profile.birthday unless profile.birthday.nil?%></div>
-    </div>
+<div class="searchfield">
+  <%= form_tag({:controller => 'public_profiles', :action => 'search'}, { :remote => true}) do %>
+    <%= label_tag :search, t('search') %>
+    <%= text_field_tag :search %>
+    <%= submit_tag :go %>
   <% end %>
+</div>
+<div id="profiles">
+  <%= render @public_profiles %>
+</div>

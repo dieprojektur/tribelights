@@ -1,6 +1,12 @@
 de:
   profiles:
+    full_name: Name
+    first_name: Vorname
+    last_name: Zuname
+    birthday: Geburtsdatum
+    picture: Bild
     show:
-      full_name: Name
-      birthday: Geburtsdatum
-      profile_header: "Profil von %{email}"
+      header: "Profil von %{email}"
+    edit:
+      header: "Profil bearbeiten"
+      errors: '%{errors} haben verhindert, dass das Profil gespeichert wurde'

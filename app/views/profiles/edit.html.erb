@@ -1,17 +1,28 @@
-<h1>Editing profile</h1>
+<h1><%= t('profiles.edit.header') %></h1>
 <div class="form edit">
   <%= form_for @profile, {:controller => 'profiles', :action => 'update', :url => profile_path, :html => {:multipart => true}} do |f| %>
+  <% if @profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= t('profile.edit.errors', :errors => pluralize(@profile.errors.count, "error") ) %>:</h2>
+
+      <ul>
+      <% @profile.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
     <%= f.fields_for :name do |name_form| %>
-      <div class="label"><%=  name_form.label :first, t('profiles.edit.first_name') %></div>
+      <div class="label"><%=  name_form.label :first, t('profiles.first_name').capitalize %></div>
       <div class="field"><%=  name_form.text_field :first  %></div>
-      <div class="label"><%=  name_form.label :last, t('profiles.edit.last_name') %></div>
+      <div class="label"><%=  name_form.label :last, t('profiles.last_name').capitalize %></div>
       <div class="field"><%=  name_form.text_field :last  %></div>
     <% end %>
-    <div class="label"><%= f.label :birthday, t('profiles.edit.birthday') %></div>
+    <div class="label"><%= f.label :birthday, t('profiles.birthday').capitalize %></div>
     <div class="field"><%= f.date_select :birthday, :start_year => 1880 %></div>
     <div class="avatar">
       <p>
-      <%= f.label :picture %>
+      <%= f.label :picture, t('profiles.picture').capitalize %><br />
       <%= image_tag(@profile.picture_url) %>
       <%= f.file_field :picture %>
       <%= f.hidden_field :picture_cache %>

@@ -1,10 +1,11 @@
 en:
   profiles:
-    edit:
-      first_name: "First Name"
-      last_name: "Last Name"
-      birthday: Birthday
+    full_name: full name
+    first_name: first name
+    last_name: last name
+    birthday: birthday
+    picture: picture
     show:
-      full_name:  Full Name
-      birthday: Birthday
-      profile_header: "%{email}'s Profile"
+      header: "%{email}'s Profile"
+    edit:
+      header: "Edit Profile"

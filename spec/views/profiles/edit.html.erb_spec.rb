@@ -15,13 +15,16 @@ describe "profiles/edit.html.erb" do
 
     rendered.should have_selector("form", :action => profile_path, :method => "post") do |form|
       form.should have_selector("label", :for => 'profile_name_attributes_first' ) do |label|
-        label.text.should == t('profiles.edit.first_name')
+        label.text.should == t('profiles.first_name').capitalize
       end
       form.should have_selector("label" , :for => 'profile_name_attributes_last') do |label|
-        label.text.should == t('profiles.edit.last_name')
+        label.text.should == t('profiles.last_name').capitalize
       end
       form.should have_selector("label", :for => 'profile_birthday' ) do |label|
-        label.text.should == t('profiles.edit.birthday')
+        label.text.should == t('profiles.birthday').capitalize
+      end
+      form.should have_selector("label", :for => 'profile_picture' ) do |label|
+        label.text.should == t('profiles.picture').capitalize
       end
       form.should have_selector("input", :type => 'text', :name => 'profile[name_attributes][first]' )
       form.should have_selector("input", :type => 'text', :name => 'profile[name_attributes][last]' )
