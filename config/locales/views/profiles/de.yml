@@ -5,8 +5,14 @@ de:
     last_name: Zuname
     birthday: Geburtsdatum
     picture: Bild
+    search: Suche
+    not_found: "Kein Profil gefunden"
     show:
       header: "Profil von %{email}"
     edit:
       header: "Profil bearbeiten"
       errors: '%{errors} haben verhindert, dass das Profil gespeichert wurde'
+    list:
+      header: "Profile"
+      buttons:
+        friend: "Als Freund hinzufügen"

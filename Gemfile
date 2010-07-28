@@ -17,11 +17,9 @@ gem 'unicorn'
 # Deploy with Capistrano
 gem 'capistrano'
 
-group :development do
-  gem 'rails3-generators'
-end
 
-group :test do
+group :development, :test do
+  gem 'rails3-generators'
   gem 'rspec-rails', '>=2.0.0.beta.12'
   gem 'rspec', '>=2.0.0.beta.12'
   gem 'rcov'

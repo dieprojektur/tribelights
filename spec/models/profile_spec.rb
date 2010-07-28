@@ -32,11 +32,19 @@ describe Profile do
      user = Factory.build(:valid_user, :profile => Profile.new)
      user.profile.create_name(:first => "Check", :last => "Bauer" )
      user.save
-
      user.profile.public_profile.should_not be_nil
      user.profile.public_profile.name.should == "Check Bauer"
-     
-
    end
-
+   it "should be able to add public profiles as friends" do
+     user = Factory.build(:valid_user, :profile => Profile.new)
+     user.save
+     other = PublicProfile.create
+     user.profile.friends << other
+   end
+   it "should be able to add public profiles as pending friends" do
+     user = Factory.build(:valid_user, :profile => Profile.new)
+     user.save
+     other = PublicProfile.create
+     user.profile.pending_friends << other
+   end
 end

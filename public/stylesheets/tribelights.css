@@ -54,3 +54,42 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
+
+ul.list{
+  list-style: none;
+  width: 760px;
+}
+
+ul.list li {
+  margin: 5px;
+}
+
+ul.list li.even {
+  background-color: #8080FF;
+}
+ul.list li.odd {
+  background-color: #C0C0C0;
+}
+
+ul.list li div {
+  padding: 5px;
+}
+
+ul.list li div.inline {
+  display: inline-block;
+}
+ul.list li div.picture {
+  height: 55px;
+  width: 55px;
+  vertical-align: top;
+  text-align: center;
+}
+ul.list li div.header {
+  font-size: 150%;
+  height: 55px;
+  vertical-align: top;
+}
+ul.list li div.info {
+}
+
+

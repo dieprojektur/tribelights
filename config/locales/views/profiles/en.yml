@@ -5,8 +5,14 @@ en:
     last_name: last name
     birthday: birthday
     picture: picture
+    search: search
+    not_found: "Did not find any matching profiles"
     show:
       header: "%{email}'s Profile"
     edit:
       header: "Edit Profile"
       errors: '%{errors} prohibited this profile from being saved'
+    list:
+      header: "Profiles"
+      buttons:
+        friend: "Add as friend"

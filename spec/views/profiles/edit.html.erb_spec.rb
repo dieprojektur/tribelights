@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "profiles/edit.html.erb" do
   before(:each) do
-    @user = Factory.build(:valid_user)
+    @user = Factory.build(:valid_user, :profile => Profile.create)
     @user.save
     @profile = assign(:profile, @user.profile)
   end

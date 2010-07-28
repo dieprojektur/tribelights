@@ -3,14 +3,17 @@ TribeLights::Application.routes.draw do |map|
 
   match "/images/uploads/*path" => "gridfs#serve"
 
-  resource :user, :only => [] do
-  end
+  resource :user, :only => [] 
+
   resource :profile
 
   resources :welcome, :only => [:index]
   resources :public_profiles, :only => [:index, :search] do
     collection do
       post :search
+    end
+    member do
+      post :friend
     end
   end
   devise_for :users

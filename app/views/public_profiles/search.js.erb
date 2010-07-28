@@ -1,5 +1,5 @@
 <% if @public_profiles.count > 0  then %>
   $('#profiles').html("<%=escape_javascript(render(@public_profiles))%>");
 <% else %>
-  $('#profiles').html('JAAAAAHAAA');
+  $('#profiles').html("<%=escape_javascript(t('profiles.not_found')) %>");
 <% end %>

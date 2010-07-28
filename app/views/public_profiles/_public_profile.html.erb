@@ -1,6 +1,12 @@
-    <div class="public_profile">
-      <div><%= image_tag public_profile.thumb_path || '/images/thumb_default.png' %>
-      <%= t('.fullname') %>:<%= public_profile.name %>
-      <%= t('.birthday') %>:<%= l public_profile.birthday unless public_profile.birthday.nil?%></div>
-    </div>
+<li class="public_profile item <%=cycle('odd', 'even') %>">
+<div class="inline picture"><%= image_tag public_profile.thumb_path || '/images/thumb_default.png' %></div>
+<div class="inline">
+  <div class="header"><%= t('profiles.full_name').capitalize %>:<%= public_profile.name %></div>
+  <div class="info"><%= t('profiles.birthday').capitalize %>:<%= l public_profile.birthday unless public_profile.birthday.nil?%></div>
+</div>
+<div class="inline">
+  <% form_tag({:controller => 'public_profiles', :action => 'friend', :id => public_profile._id }, { :remote => true})  do %>
+    <%= submit_tag :friend, :value => t('profiles.list.buttons.friend') %>
+  <% end %>
+</li>
 

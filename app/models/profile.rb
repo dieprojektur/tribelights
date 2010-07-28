@@ -8,6 +8,8 @@ class Profile
   accepts_nested_attributes_for :name
   referenced_in :user
   references_one :public_profile
+  references_many :friends, :class_name => "PublicProfile", :stored_as => :array, :inverse_of => :profiles
+  references_many :pending_friends, :class_name => "PublicProfile", :stored_as => :array, :inverse_of => :profiles
   validates_presence_of :user
   before_save :check_and_initialize_name, :create_public_profile
 
