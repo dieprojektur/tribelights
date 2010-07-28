@@ -5,7 +5,7 @@
   <div class="info"><%= t('profiles.birthday').capitalize %>:<%= l public_profile.birthday unless public_profile.birthday.nil?%></div>
 </div>
 <div class="inline">
-  <% form_tag({:controller => 'public_profiles', :action => 'friend', :id => public_profile._id }, { :remote => true})  do %>
+  <% form_tag({:controller => 'public_profiles', :action => 'friend', :id => public_profile.id }, { :remote => true})  do %>
     <%= submit_tag :friend, :value => t('profiles.list.buttons.friend') %>
   <% end %>
 </li>

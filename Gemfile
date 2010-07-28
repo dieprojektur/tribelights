@@ -6,7 +6,7 @@ gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'bson_ext', '>=1.0.4'
 
 
-gem 'mongoid', :git => 'git://github.com/abangratz/mongoid.git'
+gem 'mongoid', :git => 'git://github.com/durran/mongoid.git'
 gem 'carrierwave', :git => "git://github.com/jnicklas/carrierwave.git"
 gem 'mini_magick', :git => 'git://github.com/probablycorey/mini_magick.git'
 gem 'devise', :git => 'http://github.com/plataformatec/devise.git'

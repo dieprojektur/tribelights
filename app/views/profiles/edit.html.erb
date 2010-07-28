@@ -19,7 +19,7 @@
       <div class="field"><%=  name_form.text_field :last  %></div>
     <% end %>
     <div class="label"><%= f.label :birthday, t('profiles.birthday').capitalize %></div>
-    <div class="field"><%= f.date_select :birthday, :start_year => 1880 %></div>
+    <div class="field"><%= f.text_field :birthday, :class => 'datepicker', :value => (@profile.birthday ? l(@profile.birthday) : '') %></div>
     <div class="avatar">
       <p>
       <%= f.label :picture, t('profiles.picture').capitalize %><br />

@@ -28,9 +28,7 @@ describe "profiles/edit.html.erb" do
       end
       form.should have_selector("input", :type => 'text', :name => 'profile[name_attributes][first]' )
       form.should have_selector("input", :type => 'text', :name => 'profile[name_attributes][last]' )
-      form.should have_selector("select",  :name => 'profile[birthday(1i)]' )
-      form.should have_selector("select",  :name => 'profile[birthday(2i)]' )
-      form.should have_selector("select",  :name => 'profile[birthday(3i)]' )
+      form.should have_selector("input", :type => 'text', :name => 'profile[birthday]' )
     end
   end
 end
