@@ -13,3 +13,4 @@ vendor/plugins/
 coverage/
 rerun.txt
 Gemfile.lock
+nbproject/
