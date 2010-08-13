@@ -5,10 +5,8 @@ class PublicProfilesController < ApplicationController
     @public_profiles = PublicProfile.excludes(:profile_id => current_user.profile._id)
   end
   def search
-    re = /#{params[:search]}/
-    @public_profiles = PublicProfile.find(:all, :conditions => {:name => re})
-    logger.debug @public_profiles
-    logger.debug @public_profiles.count
+    search_regular_expression = /#{params[:search]}/
+    @public_profiles = PublicProfile.find(:all, :conditions => {:name => search_regular_expression})
     respond_to do |format|
       format.js 
     end

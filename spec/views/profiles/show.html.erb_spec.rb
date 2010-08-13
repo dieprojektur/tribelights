@@ -10,6 +10,7 @@ describe "profiles/show.html.erb" do
     @profile.should_receive(:user).and_return(current_user)
     @profile.should_receive(:birthday).twice.and_return(Date.parse('2010-01-01'))
     @profile.should_receive(:picture_url).and_return('/images/default.png')
+    @profile.should_receive(:friends).and_return([])
     assign(:profile, @profile)
     render
     rendered.should contain('John Doe')
