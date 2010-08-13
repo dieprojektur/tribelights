@@ -36,15 +36,4 @@ class ProfilesController < ApplicationController
     end
   end
 
-  # DELETE /profiles/1
-  # DELETE /profiles/1.xml
-  def destroy
-    @profile = Profile.find(params[:id])
-    @profile.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(profiles_url) }
-      format.xml  { head :ok }
-    end
-  end
 end
