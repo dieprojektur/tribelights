@@ -15,6 +15,12 @@ class Profile
 
   mount_uploader :picture, AvatarUploader
 
+  public 
+
+  def pending_friend?(other_profile) 
+    self.pending_friends.include?(other_profile)
+  end
+
   protected
   def check_and_initialize_name
     self.create_name unless self.name

@@ -8,4 +8,12 @@ class PublicProfile
   field :thumb_path, :type => String
   referenced_in :profile
 
+  def pending_friend?(profile)
+    profile.pending_friends.include?(self)
+  end
+
+  def friend?(profile)
+    profile.friends.include?(self)
+  end
+
 end

@@ -4,10 +4,16 @@
   <div class="header"><%= t('profiles.full_name').capitalize %>:<%= public_profile.name %></div>
   <div class="info"><%= t('profiles.birthday').capitalize %>:<%= l public_profile.birthday unless public_profile.birthday.nil?%></div>
 </div>
-<div class="inline">
-  <% form_tag({:controller => 'public_profiles', :action => 'friend', :id => public_profile.id }, { :remote => true})  do %>
-    <%= submit_tag :friend, :value => t('profiles.list.buttons.friend') %>
-  <% end %>
-</div>
+<% if public_profile.pending_friend?(current_user.profile) then %>
+  <%= t('profiles.friend_request_pending') %>
+<% elsif public_profile.friend?(current_user.profile) then %>
+  <%= t('profiles.already_friended') %>
+<% else %>
+  <div class="inline">
+    <% form_tag({:controller => 'public_profiles', :action => 'friend', :id => public_profile.id }, { :remote => true})  do %>
+      <%= submit_tag :friend, :value => t('profiles.list.buttons.friend') %>
+    <% end %>
+  </div>
+<% end %>
 </li>
 

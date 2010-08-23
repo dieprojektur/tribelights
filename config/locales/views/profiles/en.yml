@@ -7,6 +7,8 @@ en:
     picture: picture
     search: search
     not_found: "Did not find any matching profiles"
+    friend_request_pending: "Friend request pending"
+    already_friended: "Friend"
     show:
       header: "%{email}'s Profile"
     edit:

@@ -46,3 +46,15 @@ Feature: Public Profiles
     And I go to the public profiles page
     And I press "Add as friend"
     Then I should see "Friend request pending"
+
+
+  Scenario: empty profile list
+    Given I have the following users:
+      |email|password|firstname|lastname|birthday|
+      |test1@test.com|testing123|Test1|Last1|2010-01-01|
+    And I go to the home page
+    And I am logged in with email "test1@test.com" and password "testing123"
+    And I go to the public profiles page
+    And I fill in "search" with "Test5"
+    And I press "go"
+    Then I should see "Did not find any matching profiles"
