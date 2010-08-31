@@ -1,9 +1,9 @@
 source 'http://rubygems.org'
 
 # Bundle edge Rails instead:
-gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'rails', '3.0.0'
 
-gem 'bson_ext', '>=1.0.4'
+gem 'bson_ext', '=1.0.4'
 
 
 gem 'mongoid', :git => 'git://github.com/mongoid/mongoid.git'
@@ -30,4 +30,5 @@ group :development, :test do
   gem 'autotest-rails'
   gem 'factory_girl_rails', '=1.0'
   gem 'database_cleaner', :git => 'git://github.com/bmabey/database_cleaner.git'
+  gem 'webrat'
 end

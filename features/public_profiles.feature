@@ -12,6 +12,8 @@ Feature: Public Profiles
     And I go to the home page
     And I am logged in with email "test1@test.com" and password "testing123"
     And I go to the public profiles page
+    And I fill in "search" with "Test"
+    And I press "go"
     Then I should not see "Test1 Last1" 
     And I should see "Test2 Last2"
 
@@ -29,10 +31,10 @@ Feature: Public Profiles
     And I go to the home page
     And I am logged in with email "test1@test.com" and password "testing123"
     And I go to the public profiles page
-    And I fill in "search" with "Test1"
+    And I fill in "search" with "Test2"
     And I press "go"
-    Then I should see "Test1 Last1"
-    And I should not see "Test2 Last2"
+    Then I should see "Test2 Last2"
+    And I should not see "Test1 Last1"
     And I should not see "Test3 Last3"
 
   Scenario: adding a user as friend
@@ -44,6 +46,8 @@ Feature: Public Profiles
     And I go to the home page
     And I am logged in with email "test1@test.com" and password "testing123"
     And I go to the public profiles page
+    And I fill in "search" with "Test2"
+    And I press "go"
     And I press "Add as friend"
     Then I should see "Friend request pending"
 
